@@ -1,0 +1,4 @@
+com\test\demo\rental\model\Tool.class
+com\test\demo\rental\model\ToolType.class
+com\test\demo\rental\service\HolidayService.class
+com\test\demo\rental\model\RentalAgreement.class
