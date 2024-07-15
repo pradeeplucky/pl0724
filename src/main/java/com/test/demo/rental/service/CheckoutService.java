@@ -71,11 +71,10 @@ public class CheckoutService {
     private int calculateChargeDays(ToolType toolType, LocalDate start, LocalDate end) {
         int chargeDays = 0;
         LocalDate currentDate = start.plusDays(1);
-
+ 
         while (!currentDate.isAfter(end)) {
             boolean isWeekday = holidayService.isWeekday(currentDate);
             boolean isHoliday = holidayService.isHoliday(currentDate);
-
             if ((isWeekday && toolType.isWeekdayCharge() && !isHoliday)
                     || (!isWeekday && !isHoliday && toolType.isWeekendCharge())
                     || (isHoliday && toolType.isHolidayCharge())) {
